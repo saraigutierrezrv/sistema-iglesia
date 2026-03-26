@@ -20,17 +20,15 @@ use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 use Filament\Navigation\NavigationItem; //para poder cambiar de panel
 
-class SanNicolasPanelProvider extends PanelProvider
+class WoodmontPanelProvider extends PanelProvider
 {
     public function panel(Panel $panel): Panel
     {
         return $panel
-            ->default()
-            ->id('san-nicolas')
-            ->path('san-nicolas')
-            ->login()
+            ->id('woodmont')
+            ->path('woodmont')
             ->colors([
-                'primary' => Color::Emerald,
+                'primary' => Color::Blue,
             ])
             // --- INICIO DE LO NUEVO ---
             ->homeUrl('/') // Al hacer clic en el nombre arriba a la izquierda, te lleva al portal
@@ -41,12 +39,12 @@ class SanNicolasPanelProvider extends PanelProvider
                     ->sort(-2), // Para que aparezca de primero en el menú
             ])
             // --- FIN DE LO NUEVO ---
-            ->discoverResources(in: app_path('Filament/Resources'), for: 'App\Filament\Resources')
-            ->discoverPages(in: app_path('Filament/Pages'), for: 'App\Filament\Pages')
+            ->discoverResources(in: app_path('Filament/Woodmont/Resources'), for: 'App\Filament\Woodmont\Resources')
+            ->discoverPages(in: app_path('Filament/Woodmont/Pages'), for: 'App\Filament\Woodmont\Pages')
             ->pages([
                 Dashboard::class,
             ])
-            ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\Filament\Widgets')
+            ->discoverWidgets(in: app_path('Filament/Woodmont/Widgets'), for: 'App\Filament\Woodmont\Widgets')
             ->widgets([
                 AccountWidget::class,
                 FilamentInfoWidget::class,
