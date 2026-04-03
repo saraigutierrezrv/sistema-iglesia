@@ -12,20 +12,26 @@
         <p class="text-center text-gray-500 mb-10">Hola, {{ auth()->user()->name }}. Selecciona un panel para administrar.</p>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            @if(auth()->user()->is_admin || auth()->user()->acceso_san_nicolas)
             <a href="/san-nicolas" class="block p-8 bg-white rounded-2xl shadow-sm border-t-4 border-emerald-700 hover:shadow-lg transition-all transform hover:-translate-y-1">
                 <h2 class="text-2xl font-bold text-emerald-700  mb-2">San Nicolás</h2>
                 <p class="text-gray-600 text-sm">Gestión general de la iglesia, control de ofrendas, donaciones y gastos.</p>
             </a>
+            @endif
 
+            @if(auth()->user()->is_admin || auth()->user()->acceso_woodmont)
             <a href="/woodmont" class="block p-8 bg-white rounded-2xl shadow-sm border-t-4 border-blue-700 hover:shadow-lg transition-all transform hover:-translate-y-1">
                 <h2 class="text-2xl font-bold text-blue-700 mb-2">Woodmont</h2>
                 <p class="text-gray-600 text-sm">Administración del programa de becas Woodmont y sus beneficiarios.</p>
             </a>
+            @endif
 
+            @if(auth()->user()->is_admin || auth()->user()->acceso_mckinney)
             <a href="/mckinney" class="block p-8 bg-white rounded-2xl shadow-sm border-t-4 border-rose-700 hover:shadow-lg transition-all transform hover:-translate-y-1">
                 <h2 class="text-2xl font-bold text-rose-700 mb-2">McKinney</h2>
                 <p class="text-gray-600 text-sm">Administración del programa Milagro de Jesús y sus becarios.</p>
             </a>
+            @endif
         </div>
 
         <div class="mt-12 text-center">
