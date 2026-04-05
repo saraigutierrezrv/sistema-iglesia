@@ -28,7 +28,7 @@ class SanNicolasPanelProvider extends PanelProvider
             ->default()
             ->id('san-nicolas')
             ->path('san-nicolas')
-            ->login()
+            //->login()
             ->colors([
                 'primary' => Color::Emerald,
             ])
