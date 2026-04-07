@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Filament\Resources\Entradas;
+namespace App\Filament\Mckinney\Resources\Entradas;
 
-use App\Filament\Resources\Entradas\Pages\CreateEntrada;
-use App\Filament\Resources\Entradas\Pages\EditEntrada;
-use App\Filament\Resources\Entradas\Pages\ListEntradas;
-use App\Filament\Resources\Entradas\Pages\ViewEntrada;
-use App\Filament\Resources\Entradas\Schemas\EntradaForm;
-use App\Filament\Resources\Entradas\Schemas\EntradaInfolist;
-use App\Filament\Resources\Entradas\Tables\EntradasTable;
+use App\Filament\Mckinney\Resources\Entradas\Pages\CreateEntrada;
+use App\Filament\Mckinney\Resources\Entradas\Pages\EditEntrada;
+use App\Filament\Mckinney\Resources\Entradas\Pages\ListEntradas;
+use App\Filament\Mckinney\Resources\Entradas\Pages\ViewEntrada;
+use App\Filament\Mckinney\Resources\Entradas\Schemas\EntradaForm;
+use App\Filament\Mckinney\Resources\Entradas\Schemas\EntradaInfolist;
+use App\Filament\Mckinney\Resources\Entradas\Tables\EntradasTable;
 use App\Models\Entrada;
 use BackedEnum;
 use Filament\Resources\Resource;
@@ -57,6 +57,6 @@ class EntradaResource extends Resource
     }
     public static function getEloquentQuery(): \Illuminate\Database\Eloquent\Builder
     {
-        return parent::getEloquentQuery()->where('panel_id', 'san-nicolas');
+        return parent::getEloquentQuery()->where('panel_id', 'mckinney');
     }
 }

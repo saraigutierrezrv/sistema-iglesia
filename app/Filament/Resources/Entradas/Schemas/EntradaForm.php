@@ -6,6 +6,7 @@ use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
 use Filament\Schemas\Schema;
+use Filament\Forms\Components\Hidden;
 
 class EntradaForm
 {
@@ -13,8 +14,7 @@ class EntradaForm
     {
         return $schema
             ->components([
-                TextInput::make('panel_id')
-                    ->required()
+                Hidden::make('panel_id')
                     ->default('san-nicolas'),
                 TextInput::make('monto')
                     ->required()

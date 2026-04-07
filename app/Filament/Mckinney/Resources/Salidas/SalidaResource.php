@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Filament\Resources\Salidas;
+namespace App\Filament\Mckinney\Resources\Salidas;
 
-use App\Filament\Resources\Salidas\Pages\CreateSalida;
-use App\Filament\Resources\Salidas\Pages\EditSalida;
-use App\Filament\Resources\Salidas\Pages\ListSalidas;
-use App\Filament\Resources\Salidas\Pages\ViewSalida;
-use App\Filament\Resources\Salidas\Schemas\SalidaForm;
-use App\Filament\Resources\Salidas\Schemas\SalidaInfolist;
-use App\Filament\Resources\Salidas\Tables\SalidasTable;
+use App\Filament\Mckinney\Resources\Salidas\Pages\CreateSalida;
+use App\Filament\Mckinney\Resources\Salidas\Pages\EditSalida;
+use App\Filament\Mckinney\Resources\Salidas\Pages\ListSalidas;
+use App\Filament\Mckinney\Resources\Salidas\Pages\ViewSalida;
+use App\Filament\Mckinney\Resources\Salidas\Schemas\SalidaForm;
+use App\Filament\Mckinney\Resources\Salidas\Schemas\SalidaInfolist;
+use App\Filament\Mckinney\Resources\Salidas\Tables\SalidasTable;
 use App\Models\Salida;
 use BackedEnum;
 use Filament\Resources\Resource;
@@ -57,6 +57,6 @@ class SalidaResource extends Resource
     }
     public static function getEloquentQuery(): \Illuminate\Database\Eloquent\Builder
     {
-        return parent::getEloquentQuery()->where('panel_id', 'san-nicolas');
+        return parent::getEloquentQuery()->where('panel_id', 'mckinney');
     }
 }

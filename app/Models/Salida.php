@@ -8,4 +8,10 @@ class Salida extends Model
 {
     protected $table = 'salidas';
     protected $guarded = [];
+
+    // Esta relación es la magia
+    public function becario()
+    {
+        return $this->belongsTo(Becario::class);
+    }
 }

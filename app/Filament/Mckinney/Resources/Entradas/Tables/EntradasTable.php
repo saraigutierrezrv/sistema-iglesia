@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Filament\Resources\Entradas\Tables;
+namespace App\Filament\Mckinney\Resources\Entradas\Tables;
 
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;

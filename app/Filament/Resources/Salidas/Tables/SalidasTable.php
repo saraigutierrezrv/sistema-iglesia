@@ -15,8 +15,8 @@ class SalidasTable
     {
         return $table
             ->columns([
-                TextColumn::make('panel_id')
-                    ->searchable(),
+                //TextColumn::make('panel_id')
+                  //  ->searchable(),
                 TextColumn::make('monto')
                     ->numeric()
                     ->sortable(),

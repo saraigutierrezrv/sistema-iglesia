@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Filament\Resources\Entradas\Tables;
+namespace App\Filament\Woodmont\Resources\Salidas\Tables;
 
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
@@ -9,7 +9,7 @@ use Filament\Actions\ViewAction;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 
-class EntradasTable
+class SalidasTable
 {
     public static function configure(Table $table): Table
     {
@@ -35,6 +35,9 @@ class EntradasTable
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
+                TextColumn::make('becario_id')
+                    ->numeric()
+                    ->sortable(),
             ])
             ->filters([
                 //
